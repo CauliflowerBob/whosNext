@@ -20,15 +20,19 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Adam Jensen</h1>
-						<p>Security Chief &nbsp;&bull;&nbsp; Cyborg &nbsp;&bull;&nbsp; Never asked for this</p>
+						<h1 id ="whosNextResponse"><script>
+						fetch('https://cauliflower.api.stdlib.com/whosnext')
+						.then(response => response.text())
+						.then(response => document.getElementById('whosNextResponse').innerHTML = response.replace(/['"]+/g, ''));
+						</script></h1>
+						<p>... to buy Coffee</p>
 						<nav>
 							<ul>
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+								<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+								<li><a href="https://cauliflower.api.stdlib.com/whosnext?thisTime=John" class="icon brands fa-dribbble"><span class="label">John</span></a></li>
+								<li><a href="https://cauliflower.api.stdlib.com/whosnext?thisTime=Bob" class="icon brands fa-github"><span class="label">Bob</span></a></li>
+								<!-- <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li> -->
 							</ul>
 						</nav>
 					</header>
